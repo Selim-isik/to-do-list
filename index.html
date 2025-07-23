@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-Do List with Priority, Categories & Edit</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📝 To-Do List</h1>
+
+      <div class="input-group">
+        <input type="text" id="taskInput" placeholder="Add a new task..." />
+        <select id="prioritySelect">
+          <option value="low" selected>Low Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="high">High Priority</option>
+        </select>
+
+        <select id="categorySelect">
+          <option value="work" selected>Work</option>
+          <option value="home">Home</option>
+          <option value="school">School</option>
+        </select>
+
+        <button id="addTaskBtn">Add</button>
+      </div>
+
+      <button id="darkModeToggle">🌙 Dark Mode</button>
+
+      <div class="filter-group">
+        <button data-filter="all" class="filter-btn active">All</button>
+        <button data-filter="active" class="filter-btn">Active</button>
+        <button data-filter="completed" class="filter-btn">Completed</button>
+      </div>
+
+      <div class="category-filter-group">
+        <button data-category="all" class="category-filter-btn active">
+          All Categories
+        </button>
+        <button data-category="work" class="category-filter-btn">Work</button>
+        <button data-category="home" class="category-filter-btn">Home</button>
+        <button data-category="school" class="category-filter-btn">
+          School
+        </button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
